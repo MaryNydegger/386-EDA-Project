@@ -5,7 +5,7 @@ import plotly.express as px
 st.title('Car Data Analysis Dashboard')
 st.write('Explore insights from car data analysis')
 
-cars = ps.read_csv('merged_df')
+cars = pd.read_csv('merged_df')
 
 #Looking at MSRP with the different features.
 st.header('Scatter plot: Engine HP vs Highway MPG colored by MSRP')
