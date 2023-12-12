@@ -2,31 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-MSRP = pd.read_csv('data.csv')
-
-url = 'https://www.canstarblue.com.au/vehicles/car-country-of-origin/'
-
-response = requests.get(url)
-if response.status_code == 200:
-    soup = BeautifulSoup(response.content, 'html.parser')
-else:
-    print("Failed to retrieve the page. Status code:", response.status_code)
-
-table = soup.find('h2', text='Car Brands – Country of Origin').find_next('table')
-
-data = []
-for row in table.find_all('tr')[1:]:
-    columns = row.find_all('td')
-    row_data = [col.get_text(strip=True) for col in columns]
-    data.append(row_data)
-
-df = pd.DataFrame(data, columns=['Car Brand', 'Country of Origin'])
-
 st.title('Car Data Analysis Dashboard')
 st.write('Explore insights from car data analysis')
 
-file_path = '/Users/marynydegger/Documents/FALL2023/STAT386/EDA Project/merged_df'
-cars = pd.read_csv(file_path)
+cars = ps.read_csv('merged_df.csv')
 
 #Looking at MSRP with the different features.
 st.header('Scatter plot: Engine HP vs Highway MPG colored by MSRP')
