@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+MSRP = pd.read_csv('data.csv')
+
 st.title('Car Data Analysis Dashboard')
 st.write('Explore insights from car data analysis')
 
