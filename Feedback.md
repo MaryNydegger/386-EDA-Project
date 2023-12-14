@@ -21,7 +21,7 @@ Overall, simple language and easy to follow for someone who doesn't know anythin
 * *Tyler Smith*: This dataset correlates car brands with their respective countries of origin. It provides insight into the global representation of different automotive manufacturers. (Found at this website `https://www.canstarblue.com.au/vehicles/car-country-of-origin/`)
 
 
-### Part 3
+### Part 3 - EDA
 * *Orion*: I like sunflowers as much as the next guy, but it may be fun to have a different picture for this blog post since the last 3 posts have the same image. Edit: It looks like it randomly generates a picture when you click on a blog post, which is sweet, but it looks like it back populates those to the other posts as well on the home page.
 Your Data Analysis post is set in November, but the Data Cleaning post is set in December. Did you do them in that order?
 It felt like the synopsis was a little more flowery and hard to unpack than your previous post. I might break it into more sentences to make reading flow better.
@@ -36,8 +36,9 @@ Similar to the introduction, the conclusion felt too dense to read super easily.
 
 
 ### Part 4
-* *Orion*: Your dashboard had an error when I tried to load it. I'm guessing it's an issue with importing plotly, but I don't know how to solve it, sorry.
+* *Orion*: Your dashboard had an error when I tried to load it. I'm guessing it's an issue with importing plotly, but I don't know how to solve it, sorry... Now your blog post URLs are giving me a 404 error. Did you change something with them?
+In terms of the streamlit thing, did you include the requirements.txt? I think that's how streamlit determines which packages to install so that might be what's giving the error. 
 
-* *Evan Miller*: This dataset correlates car brands with their respective countries of origin. It provides insight into the global representation of different automotive manufacturers. (Found at this website `https://www.canstarblue.com.au/vehicles/car-country-of-origin/`)
+* *Tyler Duke*: That works! I think your app is really easy to use and intuitive what we are testing. In my opinion, adding a short, 1-2 sentence explanation on each graph can help increase the usability of the app. Also the "Engine Size vs. Horsepower Scatterplot" is a little excessive in my opinion because there are so many options for car model options. It might be better if you have the x-axis be the model and the engine size be a selection option (this is just one option you can do many other things). Also, if you are going for Tier 1, the rubric says to "Integrate navigation options or links to your blog post and the GitHub repository for those who want to delve deeper into your project."
 
 * *Tyler Smith*: This dataset correlates car brands with their respective countries of origin. It provides insight into the global representation of different automotive manufacturers. (Found at this website `https://www.canstarblue.com.au/vehicles/car-country-of-origin/`)
