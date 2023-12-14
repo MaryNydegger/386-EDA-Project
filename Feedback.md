@@ -18,7 +18,7 @@ Your pictures didn't show up for me (I was on Eduroam if that affects anything?)
 It looks like you forgot to put in the link for your next post in Conclusion, but I'd also add a link to it when you reference it in Data Building
 Overall, simple language and easy to follow for someone who doesn't know anything about cars 
 
-* *Tyler Smith*: Hi Mary! I just read through your data collection post! My favorite thing about it was when you showed examples of what the data looked like that you were collecting, especially as part of the cleaning process. For me there was a little bit of confusion when you talked about merging the country of origin into your table and how you tried the wikipedia page but then it wasn't really working. What did you end up doing when you decided to change paths? I would explain that a little bit more in your post! Great work, i thought the post was great.
+* *Daphne LeSueur*: Hi Mary! I just read through your data collection post! My favorite thing about it was when you showed examples of what the data looked like that you were collecting, especially as part of the cleaning process. For me there was a little bit of confusion when you talked about merging the country of origin into your table and how you tried the wikipedia page but then it wasn't really working. What did you end up doing when you decided to change paths? I would explain that a little bit more in your post! Great work, i thought the post was great.
 
 
 ### Part 3 - EDA
@@ -32,7 +32,7 @@ Similar to the introduction, the conclusion felt too dense to read super easily.
 
 * *Justin Pferdner*: Having a table of contents is super helpful! I liked that you included how your approach changed (going from scatterplot to box plots to make a more informative graph) and you really dove into your analysis which made it more than just a light skim over some charts. I also liked how you included your streamlit app in the post. It looks great!
 
-* *Tyler*: I liked your table of contents and the flow of the images, i thought you very clearly explained your process. I thought it all was very well put together and didn't see many grammatical fixes. One thing that could be interesting is including more specific insights in the conclusion, like what you actually learned from the project. Key takeaways. Other than that it looks great.
+* *Tyler Smith*: I liked your table of contents and the flow of the images, i thought you very clearly explained your process. I thought it all was very well put together and didn't see many grammatical fixes. One thing that could be interesting is including more specific insights in the conclusion, like what you actually learned from the project. Key takeaways. Other than that it looks great.
 
 
 ### Part 4
@@ -43,4 +43,7 @@ In terms of the streamlit thing, did you include the requirements.txt? I think t
 
 * *Justin Pferdner*: I like all the visualizations and how you have recommended ranges for the filters. I think the dashboard flows nicely and there are lots of things to compare. The only thing I was curious about in terms of functionality was if there was a way to click “All” in the filters so it automatically selects every option. Other than that it looks great!!
 
-###
+### Takeaways From the Feedback
+I thought this process of taking and applying feedback was super helpful. There were a lot of words and things I spelled wrong when trying to type things out fast so it was great having another eye to go over my work and find those mistakes. The feedback also helped me to stay on track - like make a conclusion and provide key takeaways to both the blog post as well as the streamlit app. I basically applied this feedback to my project as I got it, and I wrote them all out in the order I received them. I committed and redid things many times, but overall I am really glad I took the constructive feedback to improve my project and my analysis. 
+
+I faced a lot of challenges in making the streamlit app because I had a few of the packages spelled wrong. But once I received feedback to go check out the packages, I quickly found it. And i appreciated the advice making it more usable. That was probably my favorite part of the project - putting together the app and seeing it all work together. 
