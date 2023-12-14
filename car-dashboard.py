@@ -41,8 +41,9 @@ st.plotly_chart(bar_fig)
 
 st.write('This is a quick and easy way to visualize the amounts of models each country has and compare them against each other.')
 
-#Look at the MSRP of certain makes and engine sizes.
+#Look at the average MPG of certain makes and engine sizes.
 st.header('Car Make vs. Engine Size vs. MPG Scatterplot')
+st.write('Select some models you would be interested in comparing the average MPG. The different colors represent the size of the vehicle. I found this visualization super interesting, especially in trying to find the most fuel efficient make of a car. I found it interesting to view different makes with a Ferrari, because Ferraris do not have good MPGs, so I liked looking at different models with that.')
 
 selected_car_make = st.multiselect('Select Vehicle Make', cars['Make'].unique())
 selected_engine_size = st.multiselect('Select Vehicle Size', cars['Vehicle Size'].unique())
@@ -51,20 +52,21 @@ filtered_cars = cars[cars['Make'].isin(selected_car_make) & cars['Vehicle Size']
 
 avg_mpg = filtered_cars.groupby(['Make', 'Vehicle Size'])['city mpg'].mean().reset_index()
 
-scatterplot = px.scatter(avg_mpg, x='Make', y='city mpg', color='Vehicle Size', hover_data=['Make', 'Vehicle Size'])
+scatterplot = px.scatter(avg_mpg, x='Make', y='Average MPG', color='Vehicle Size', hover_data=['Make', 'Vehicle Size'])
 st.plotly_chart(scatterplot)
 
 #Fuel efficiency across different car sizes
 st.header('Fuel Efficiency Across Different Car Sizes by Country of Origin')
+st.write('This one is similar to the previous graph, but it instead focuses on the countries and the highway MPGs those models produce, instead of the average city MPG.')
 widget_key = 'select_countries'
 
 selected_countries = st.multiselect('Select Countries', cars['Country of Origin'].unique(), key=widget_key)
 filtered_data = cars[cars['Country of Origin'].isin(selected_countries)]
 
-fig = px.bar(filtered_data, x='Vehicle Size', y=['highway MPG', 'city mpg'], color='Country of Origin',
+fig = px.bar(filtered_data, x='Vehicle Size', y=['highway MPG'], color='Country of Origin',
              barmode='group',
              title='Fuel Efficiency Across Different Car Sizes by Country of Origin',
-             labels={'value': 'MPG', 'Vehicle Size': 'Car Size', 'Country of Origin': 'Country'},
+             labels={'value': 'Highway MPG', 'Vehicle Size': 'Car Size', 'Country of Origin': 'Country'},
              hover_name='Make', hover_data=['Model'])
 
 fig.update_layout(xaxis_title='Car Size', yaxis_title='MPG')
