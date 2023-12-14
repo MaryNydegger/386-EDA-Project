@@ -41,10 +41,10 @@ st.plotly_chart(bar_fig)
 
 st.write('This is a quick and easy way to visualize the amounts of models each country has and compare them against each other.')
 
-#Look at the engine size and horsepower in for certain models.
+#Look at the MSRP of certain makes and engine sizes.
 st.header('Car Make vs. Engine Size vs. MPG Scatterplot')
-selected_car_make = st.multiselect('Select Make', cars['Make'].unique())
-filtered_cars = cars[cars['Vehicle Make'].isin(selected_car_make)]
+selected_car_make = st.multiselect('Select Vehicle Make', cars['Make'].unique())
+filtered_cars = cars[cars['Make'].isin(selected_car_make)]
 selected_engine_size = st.multiselect('Select Engine Size', cars['Vehicle Size'].unique())
 filtered_cars = filtered_cars[filtered_cars['Vehicle Size'].isin(selected_engine_size)]
 scatterplot = px.scatter(filtered_cars, x='Model', y='Vehicle Size', color='MPG', hover_data=['Country of Origin'])
