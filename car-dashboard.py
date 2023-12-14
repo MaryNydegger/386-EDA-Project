@@ -47,7 +47,7 @@ selected_car_make = st.multiselect('Select Vehicle Make', cars['Make'].unique())
 filtered_cars = cars[cars['Make'].isin(selected_car_make)]
 selected_engine_size = st.multiselect('Select Vehicle Size', cars['Vehicle Size'].unique())
 filtered_cars = filtered_cars[filtered_cars['Vehicle Size'].isin(selected_engine_size)]
-scatterplot = px.scatter(filtered_cars, x='Make', y='city mpg', color='Vehicle Size', hover_data=['Country of Origin'])
+scatterplot = px.scatter(filtered_cars, x='Make', y=avg('city mpg'), color='Vehicle Size', hover_data=['Country of Origin'])
 st.plotly_chart(scatterplot)
 
 #Fuel efficiency across different car sizes
