@@ -52,7 +52,8 @@ filtered_cars = cars[cars['Make'].isin(selected_car_make) & cars['Vehicle Size']
 
 avg_mpg = filtered_cars.groupby(['Make', 'Vehicle Size'])['city mpg'].mean().reset_index()
 
-scatterplot = px.scatter(avg_mpg, x='Make', y='Average MPG', color='Vehicle Size', hover_data=['Make', 'Vehicle Size'])
+scatterplot = px.scatter(avg_mpg, x='Make', y='city mpg', color='Vehicle Size', hover_data=['Make', 'Vehicle Size'])
+scatterplot.update_layout(yaxis_title='Average City MPG')
 st.plotly_chart(scatterplot)
 
 #Fuel efficiency across different car sizes
