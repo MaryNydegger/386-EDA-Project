@@ -43,11 +43,15 @@ st.write('This is a quick and easy way to visualize the amounts of models each c
 
 #Look at the MSRP of certain makes and engine sizes.
 st.header('Car Make vs. Engine Size vs. MPG Scatterplot')
+
 selected_car_make = st.multiselect('Select Vehicle Make', cars['Make'].unique())
-filtered_cars = cars[cars['Make'].isin(selected_car_make)]
 selected_engine_size = st.multiselect('Select Vehicle Size', cars['Vehicle Size'].unique())
-filtered_cars = filtered_cars[filtered_cars['Vehicle Size'].isin(selected_engine_size)]
-scatterplot = px.scatter(filtered_cars, x='Make', y=avg('city mpg'), color='Vehicle Size', hover_data=['Country of Origin'])
+
+filtered_cars = cars[cars['Make'].isin(selected_car_make) & cars['Vehicle Size'].isin(selected_engine_size)]
+
+avg_mpg = filtered_cars.groupby(['Make', 'Vehicle Size'])['city mpg'].mean().reset_index()
+
+scatterplot = px.scatter(avg_mpg, x='Make', y='city mpg', color='Vehicle Size', hover_data=['Make', 'Vehicle Size'])
 st.plotly_chart(scatterplot)
 
 #Fuel efficiency across different car sizes
