@@ -9,7 +9,7 @@ cars = pd.read_csv('merged_df.csv')
 
 #Looking at MSRP with the different features.
 st.header('Scatter plot: Engine HP vs Highway MPG colored by MSRP')
-st.write('Recommendation: Look at the results in the scatterplot for only one specific MSRP amount, like 2000. Or take it to smaller price ranges.')
+st.write('Recommended ranges: 2000, 2000 - 10,000, 10,000 - 20,000, 20,000 - 50,000, 50,000 +.')
 
 msrp_min = int(cars['MSRP'].min())
 msrp_max = int(cars['MSRP'].max())
@@ -24,6 +24,9 @@ fig = px.scatter(filtered_data, x='Engine HP', y='highway MPG', color='MSRP',
 fig.update_layout(xaxis_title='Engine HP', yaxis_title='Highway MPG')
 st.plotly_chart(fig)
 
+st.write('The lower MSRPs have much higher volume of observations, so I found those more interesting to look a and see how the MPG and horsepower vary between those. Check out my suggested ranges.')
+
+
 #Look at the different amounts of models in each country
 st.header('Car Distribution Map')
 selected_countries = st.multiselect('Select Countries', cars['Country of Origin'].unique())
@@ -36,11 +39,15 @@ bar_fig = px.bar(country_model_counts, x='Country', y='Model Count',
 bar_fig.update_layout(xaxis_title='Country', yaxis_title='Number of Models')
 st.plotly_chart(bar_fig)
 
+st.write('This is a quick and easy way to visualize the amounts of models each country has and compare them against each other.')
+
 #Look at the engine size and horsepower in for certain models.
-st.header('Engine Size vs. Horsepower Scatterplot')
-selected_models = st.multiselect('Select Car Models', cars['Model'].unique())
-filtered_cars = cars[cars['Model'].isin(selected_models)]
-scatterplot = px.scatter(filtered_cars, x = 'Engine Cylinders', y = 'Engine HP', color = 'Country of Origin', hover_data = ['Model'])
+st.header('Car Model vs. Engine Size Scatterplot')
+selected_engine_size = st.multiselect('Select Engine Size', cars['Engine Size'].unique())
+filtered_cars = cars[cars['Engine Size'].isin(selected_engine_size)]
+selected_models = st.multiselect('Select Car Models', filtered_cars['Model'].unique())
+filtered_cars = filtered_cars[filtered_cars['Model'].isin(selected_models)]
+scatterplot = px.scatter(filtered_cars, x='Model', y='Engine Size', color='Country of Origin', hover_data=['Model'])
 st.plotly_chart(scatterplot)
 
 #Fuel efficiency across different car sizes
@@ -58,6 +65,13 @@ fig = px.bar(filtered_data, x='Vehicle Size', y=['highway MPG', 'city mpg'], col
 
 fig.update_layout(xaxis_title='Car Size', yaxis_title='MPG')
 st.plotly_chart(fig)
+
+st.write('I thought this was one of the most interesting visualizations because you can view multiple features at once. I would suggest looking at America and Germany together. These countries both are some of the top model producers, but the MPG for larger American cars is substantially higher than in Germany. The other vehicle sizes have closer results so I would have expected that too.')
+
+st.markdown("[Car Pricing Data Compilation](https://marynydegger.github.io/my-blog/2023/11/17/Car-Pricing-Data-Compilation.html)")
+st.markdown("[Car Features EDA](https://marynydegger.github.io/my-blog/2023/12/07/Car-Features-EDA.html)")
+st.markdwon("[Github Repository](https://github.com/MaryNydegger/386-EDA-Project)")
+
 
 
 
