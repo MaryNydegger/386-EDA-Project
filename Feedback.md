@@ -18,7 +18,7 @@ Your pictures didn't show up for me (I was on Eduroam if that affects anything?)
 It looks like you forgot to put in the link for your next post in Conclusion, but I'd also add a link to it when you reference it in Data Building
 Overall, simple language and easy to follow for someone who doesn't know anything about cars 
 
-* *Tyler Smith*: This dataset correlates car brands with their respective countries of origin. It provides insight into the global representation of different automotive manufacturers. (Found at this website `https://www.canstarblue.com.au/vehicles/car-country-of-origin/`)
+* *Tyler Smith*: Hi Mary! I just read through your data collection post! My favorite thing about it was when you showed examples of what the data looked like that you were collecting, especially as part of the cleaning process. For me there was a little bit of confusion when you talked about merging the country of origin into your table and how you tried the wikipedia page but then it wasn't really working. What did you end up doing when you decided to change paths? I would explain that a little bit more in your post! Great work, i thought the post was great.
 
 
 ### Part 3 - EDA
@@ -30,9 +30,9 @@ There are a few typos in your first paragraph of EDA you may want to look over. 
 I personally prefer having the label for a graph ("Graph X.Y") after the image rather than before it. Maybe that's what math textbooks have conditioned me with.
 Similar to the introduction, the conclusion felt too dense to read super easily. I'd like to see less generael statements and more specific takeaways you got from your project (like how much to sell your car for)
 
-* *Evan Miller*: This dataset correlates car brands with their respective countries of origin. It provides insight into the global representation of different automotive manufacturers. (Found at this website `https://www.canstarblue.com.au/vehicles/car-country-of-origin/`)
+* *Justin Pferdner*: Having a table of contents is super helpful! I liked that you included how your approach changed (going from scatterplot to box plots to make a more informative graph) and you really dove into your analysis which made it more than just a light skim over some charts. I also liked how you included your streamlit app in the post. It looks great!
 
-* *Tyler Smith*: This dataset correlates car brands with their respective countries of origin. It provides insight into the global representation of different automotive manufacturers. (Found at this website `https://www.canstarblue.com.au/vehicles/car-country-of-origin/`)
+* *Tyler*: I liked your table of contents and the flow of the images, i thought you very clearly explained your process. I thought it all was very well put together and didn't see many grammatical fixes. One thing that could be interesting is including more specific insights in the conclusion, like what you actually learned from the project. Key takeaways. Other than that it looks great.
 
 
 ### Part 4
@@ -41,4 +41,6 @@ In terms of the streamlit thing, did you include the requirements.txt? I think t
 
 * *Tyler Duke*: That works! I think your app is really easy to use and intuitive what we are testing. In my opinion, adding a short, 1-2 sentence explanation on each graph can help increase the usability of the app. Also the "Engine Size vs. Horsepower Scatterplot" is a little excessive in my opinion because there are so many options for car model options. It might be better if you have the x-axis be the model and the engine size be a selection option (this is just one option you can do many other things). Also, if you are going for Tier 1, the rubric says to "Integrate navigation options or links to your blog post and the GitHub repository for those who want to delve deeper into your project."
 
-* *Tyler Smith*: This dataset correlates car brands with their respective countries of origin. It provides insight into the global representation of different automotive manufacturers. (Found at this website `https://www.canstarblue.com.au/vehicles/car-country-of-origin/`)
+* *Justin Pferdner*: I like all the visualizations and how you have recommended ranges for the filters. I think the dashboard flows nicely and there are lots of things to compare. The only thing I was curious about in terms of functionality was if there was a way to click “All” in the filters so it automatically selects every option. Other than that it looks great!!
+
+###
