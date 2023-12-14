@@ -43,11 +43,11 @@ st.write('This is a quick and easy way to visualize the amounts of models each c
 
 #Look at the engine size and horsepower in for certain models.
 st.header('Car Model vs. Engine Size Scatterplot')
-selected_engine_size = st.multiselect('Select Engine Size', cars['Engine Size'].unique())
-filtered_cars = cars[cars['Engine Size'].isin(selected_engine_size)]
+selected_engine_size = st.multiselect('Select Engine Size', cars['Vehicle Size'].unique())
+filtered_cars = cars[cars['Vehicle Size'].isin(selected_engine_size)]
 selected_models = st.multiselect('Select Car Models', filtered_cars['Model'].unique())
 filtered_cars = filtered_cars[filtered_cars['Model'].isin(selected_models)]
-scatterplot = px.scatter(filtered_cars, x='Model', y='Engine Size', color='Country of Origin', hover_data=['Model'])
+scatterplot = px.scatter(filtered_cars, x='Model', y='Vehicle Size', color='Country of Origin', hover_data=['Model'])
 st.plotly_chart(scatterplot)
 
 #Fuel efficiency across different car sizes
