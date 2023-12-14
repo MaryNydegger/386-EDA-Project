@@ -42,12 +42,12 @@ st.plotly_chart(bar_fig)
 st.write('This is a quick and easy way to visualize the amounts of models each country has and compare them against each other.')
 
 #Look at the engine size and horsepower in for certain models.
-st.header('Car Model vs. Engine Size Scatterplot')
+st.header('Car Make vs. Engine Size vs. MPG Scatterplot')
+selected_car_make = st.multiselect('Select Make', cars['Make'].unique())
+filtered_cars = cars[cars['Vehicle Make'].isin(selected_car_make)]
 selected_engine_size = st.multiselect('Select Engine Size', cars['Vehicle Size'].unique())
-filtered_cars = cars[cars['Vehicle Size'].isin(selected_engine_size)]
-selected_models = st.multiselect('Select Car Models', filtered_cars['Model'].unique())
-filtered_cars = filtered_cars[filtered_cars['Model'].isin(selected_models)]
-scatterplot = px.scatter(filtered_cars, x='Model', y='Vehicle Size', color='Country of Origin', hover_data=['Model'])
+filtered_cars = filtered_cars[filtered_cars['Vehicle Size'].isin(selected_engine_size)]
+scatterplot = px.scatter(filtered_cars, x='Model', y='Vehicle Size', color='MPG', hover_data=['Country of Origin'])
 st.plotly_chart(scatterplot)
 
 #Fuel efficiency across different car sizes
@@ -70,7 +70,7 @@ st.write('I thought this was one of the most interesting visualizations because 
 
 st.markdown("[Car Pricing Data Compilation](https://marynydegger.github.io/my-blog/2023/11/17/Car-Pricing-Data-Compilation.html)")
 st.markdown("[Car Features EDA](https://marynydegger.github.io/my-blog/2023/12/07/Car-Features-EDA.html)")
-st.markdwon("[Github Repository](https://github.com/MaryNydegger/386-EDA-Project)")
+st.markdown("[Github Repository](https://github.com/MaryNydegger/386-EDA-Project)")
 
 
 
